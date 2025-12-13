@@ -1,0 +1,107 @@
+:root {
+    --background-color: #ecf0f1;
+    --card-color: #ffffff;
+    --primary-color: #56a5eb; /* A nice soft blue */
+    --text-color: #2c3e50;
+    --hover-color: #e2e6ea;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Main Game Container */
+.container {
+    width: 100%;
+    max-width: 800px; /* Prevents it from getting too wide on desktop */
+    padding: 2rem;
+    background-color: var(--card-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.justify-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+/* HUD (Score & Progress) Styling */
+#hud {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.hud-prefix {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hud-main-text {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+/* Question Styling */
+#question {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Answer Buttons Styling */
+.choice-container {
+    display: flex;
+    margin-bottom: 1rem;
+    width: 100%;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 5px;
+    background-color: white;
+    transition: transform 150ms; /* Smooth animation on hover */
+}
+
+.choice-container:hover {
+    transform: scale(1.02); /* Slight pop out effect */
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    border-color: var(--primary-color);
+}
+
+.choice-prefix {
+    padding: 1.5rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.5rem;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.choice-text {
+    padding: 1.5rem;
+    width: 100%;
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    color: var(--text-color);
+}

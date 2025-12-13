@@ -63,10 +63,11 @@ const answers = [...currentQ.incorrect_answers, currentQ.correct_answer];
                 alert('wrong');
             }
 
-            if (score === 60) {
-                alert('you win');
-            }
+            
             currentQuestionIndex++;
+            if (currentQuestionIndex === 50) {
+                alert(`you win!: total score:${score}`);
+            }
             
 
             displayQuestion()
